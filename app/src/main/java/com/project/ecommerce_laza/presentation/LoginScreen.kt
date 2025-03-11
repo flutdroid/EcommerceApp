@@ -15,6 +15,7 @@ import androidx.compose.material3.Button
 import androidx.compose.material3.Switch
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextField
+import androidx.compose.material3.TextFieldDefaults
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -71,11 +72,23 @@ fun LoginScreen() {
                     .fillMaxWidth()
                     .padding(bottom = 6.dp),
                 placeholder = {
-                    Text("Username")
-                })
+                    Text("Username", color = Color.White)
+                }, colors = TextFieldDefaults.colors(
+                    focusedContainerColor = Color.Black,
+                    unfocusedContainerColor = Color.Black,
+                    focusedTextColor = Color.White,
+                    unfocusedTextColor = Color.White
+                )
+            )
             TextField("", onValueChange = {}, modifier = Modifier.fillMaxWidth(), placeholder = {
-                Text("Password")
-            })
+                Text("Password", color = Color.White)
+            }, colors = TextFieldDefaults.colors(
+                focusedContainerColor = Color.Black,
+                unfocusedContainerColor = Color.Black,
+                focusedTextColor = Color.White,
+                unfocusedTextColor = Color.White
+            )
+            )
             Text(
                 "Forgot Password ?",
                 fontSize = 16.sp,

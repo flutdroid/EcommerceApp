@@ -25,9 +25,11 @@ import com.project.ecommerce_laza.presentation.components.AddNewCardComp
 @Preview
 @Composable
 fun AddNewCardScreen() {
-    Box(modifier = Modifier
-        .fillMaxSize()
-        .padding(16.dp)) {
+    Box(
+        modifier = Modifier
+            .fillMaxSize()
+            .padding(16.dp)
+    ) {
         Column(modifier = Modifier.fillMaxSize()) {
             Row(
                 modifier = Modifier.fillMaxWidth(),
@@ -62,9 +64,11 @@ fun AddNewCardScreen() {
                 }
             }
         }
-        Button(onClick = {}, modifier = Modifier
-            .fillMaxWidth()
-            .align(Alignment.BottomStart)) {
+        Button(
+            onClick = {}, modifier = Modifier
+                .fillMaxWidth()
+                .align(Alignment.BottomStart)
+        ) {
             Text(
                 "Add Card",
                 fontSize = 24.sp,

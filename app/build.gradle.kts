@@ -1,7 +1,11 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
-    alias(libs.plugins.kotlin.compose)
+    alias(libs.plugins.compose.compiler)
+    alias(libs.plugins.devtools.ksp)
+    alias(libs.plugins.hilt.android)
+    alias(libs.plugins.kotlin.serialization)
+    id("com.google.gms.google-services")
 }
 
 android {
@@ -41,20 +45,40 @@ android {
 
 dependencies {
 
-    implementation(libs.androidx.core.ktx)
-    implementation(libs.androidx.lifecycle.runtime.ktx)
-    implementation(libs.androidx.activity.compose)
-    implementation(platform(libs.androidx.compose.bom))
-    implementation(libs.androidx.ui)
-    implementation(libs.androidx.ui.graphics)
-    implementation(libs.androidx.ui.tooling.preview)
-    implementation(libs.androidx.material3)
-    implementation (libs.androidx.navigation.compose)
-    testImplementation(libs.junit)
-    androidTestImplementation(libs.androidx.junit)
-    androidTestImplementation(libs.androidx.espresso.core)
-    androidTestImplementation(platform(libs.androidx.compose.bom))
-    androidTestImplementation(libs.androidx.ui.test.junit4)
-    debugImplementation(libs.androidx.ui.tooling)
-    debugImplementation(libs.androidx.ui.test.manifest)
+    //Compose
+    implementation(platform(libs.compose.bom))
+    implementation(libs.compose.material)
+    implementation(libs.compose.material.icons)
+    //Navigation
+    implementation(libs.navigation.compose)
+    //Hilt Navigation Compose
+    implementation(libs.hilt.navigation.compose)
+    //Hilt
+    implementation(libs.hilt)
+    implementation(libs.material3.android)
+    implementation(libs.junit.ktx)
+    implementation(libs.firebase.auth)
+    implementation(libs.ui.tooling.preview.android)
+    testImplementation(libs.hilt.android.testing)
+    ksp(libs.hilt.compiler)
+    //Serialization
+    implementation(libs.serialization)
+    //Tests
+    androidTestImplementation(libs.navigation.testing)
+    androidTestImplementation(libs.hilt.android.testing)
+    androidTestImplementation(libs.runner)
+    androidTestImplementation(libs.ui.test.junit4)
+    androidTestImplementation(libs.kotlinx.coroutines.test)
+    androidTestImplementation(libs.truth)
+    debugImplementation(libs.ui.test.manifest)
+    testImplementation (libs.junit)
+    testImplementation (libs.mockk)
+    testImplementation (libs.kotlinx.coroutines.test.v173)
+    // retrofit
+    implementation (libs.retrofit)
+    // GSON
+    implementation (libs.converter.gson)
+    // coroutine
+    implementation(libs.kotlinx.coroutines.android)
+    implementation (libs.kotlinx.coroutines.core)
 }

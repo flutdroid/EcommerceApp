@@ -12,6 +12,7 @@ import androidx.compose.material3.Button
 import androidx.compose.material3.Switch
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextField
+import androidx.compose.material3.TextFieldDefaults
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -54,7 +55,13 @@ fun AddAddressScreen() {
                 onValueChange = {},
                 modifier = Modifier
                     .fillMaxWidth()
-                    .padding(top = 6.dp)
+                    .padding(top = 6.dp),
+                colors = TextFieldDefaults.colors(
+                    focusedContainerColor = Color(0xFF222E34),
+                    unfocusedContainerColor = Color(0xFF222E34),
+                    focusedTextColor = Color.White,
+                    unfocusedTextColor = Color.White
+                )
             )
             Row(
                 modifier = Modifier
@@ -67,11 +74,21 @@ fun AddAddressScreen() {
                         .padding(end = 6.dp)
                 ) {
                     Text("Country", fontSize = 24.sp, color = Color.White)
-                    TextField("", onValueChange = {})
+                    TextField("", onValueChange = {},colors = TextFieldDefaults.colors(
+                        focusedContainerColor = Color(0xFF222E34),
+                        unfocusedContainerColor = Color(0xFF222E34),
+                        focusedTextColor = Color.White,
+                        unfocusedTextColor = Color.White
+                    ))
                 }
                 Column(modifier = Modifier.weight(1f)) {
                     Text("City", fontSize = 24.sp, color = Color.White)
-                    TextField("", onValueChange = {})
+                    TextField("", onValueChange = {},colors = TextFieldDefaults.colors(
+                        focusedContainerColor = Color(0xFF222E34),
+                        unfocusedContainerColor = Color(0xFF222E34),
+                        focusedTextColor = Color.White,
+                        unfocusedTextColor = Color.White
+                    ))
                 }
             }
             Text(
@@ -85,7 +102,13 @@ fun AddAddressScreen() {
                 onValueChange = {},
                 modifier = Modifier
                     .fillMaxWidth()
-                    .padding(top = 6.dp, bottom = 6.dp)
+                    .padding(top = 6.dp, bottom = 6.dp),
+                colors = TextFieldDefaults.colors(
+                    focusedContainerColor = Color(0xFF222E34),
+                    unfocusedContainerColor = Color(0xFF222E34),
+                    focusedTextColor = Color.White,
+                    unfocusedTextColor = Color.White
+                )
             )
             Text("Address", fontSize = 24.sp, color = Color.White)
             TextField(
@@ -93,7 +116,13 @@ fun AddAddressScreen() {
                 onValueChange = {},
                 modifier = Modifier
                     .fillMaxWidth()
-                    .padding(top = 6.dp, bottom = 6.dp)
+                    .padding(top = 6.dp, bottom = 6.dp),
+                colors = TextFieldDefaults.colors(
+                    focusedContainerColor = Color(0xFF222E34),
+                    unfocusedContainerColor = Color(0xFF222E34),
+                    focusedTextColor = Color.White,
+                    unfocusedTextColor = Color.White
+                )
             )
             Row(
                 modifier = Modifier
@@ -111,7 +140,7 @@ fun AddAddressScreen() {
                 .fillMaxWidth()
                 .align(Alignment.BottomStart)
         ) {
-            Text("Save Address", fontSize = 18.sp, color = Color.White)
+            Text("Save Address", fontSize = 18.sp, color = Color.White, modifier = Modifier.padding(vertical = 8.dp))
         }
     }
 }

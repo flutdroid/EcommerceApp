@@ -18,30 +18,28 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 import com.project.ecommerce_laza.R
 
 @Composable
-fun CreateAccountComp(text: String, icon: Int) {
+fun CreateAccountComp(text: String, bgColor: Color) {
     Box(
         modifier = Modifier
             .fillMaxWidth()
             .padding(vertical = 8.dp)
             .clip(RoundedCornerShape(8.dp))
-            .background(Color.Blue),
+            .background(bgColor),
         contentAlignment = Alignment.Center
     ) {
         Row(
             modifier = Modifier.wrapContentSize().padding(vertical = 4.dp),
             verticalAlignment = Alignment.CenterVertically
         ) {
-            Image(
-                painter = painterResource(icon),
-                contentDescription = null
-            )
-            Text(text, modifier = Modifier.padding(start = 4.dp))
+            Text(text, modifier = Modifier.padding(horizontal = 4.dp, vertical = 16.dp), fontSize = 18.sp, fontWeight = FontWeight.Bold, color = Color.White)
         }
     }
 }

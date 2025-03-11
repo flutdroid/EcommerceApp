@@ -126,8 +126,8 @@ private fun CharView(
             .wrapContentHeight()
             .border(
                 1.dp, when {
-                    isFocused -> Color.Gray
-                    else -> Color.Red
+                    isFocused -> Color.White
+                    else -> Color.White
                 }, RoundedCornerShape(8.dp)
             )
             .padding(16.dp),
@@ -135,9 +135,9 @@ private fun CharView(
         fontSize = 26.sp,
         style = MaterialTheme.typography.labelLarge,
         color = if (isFocused) {
-            Color.Gray
+            Color.White
         } else {
-            Color.DarkGray
+            Color.Gray
         },
         textAlign = TextAlign.Center
     )

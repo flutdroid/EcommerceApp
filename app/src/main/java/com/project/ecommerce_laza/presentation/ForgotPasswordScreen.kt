@@ -12,6 +12,7 @@ import androidx.compose.foundation.layout.wrapContentSize
 import androidx.compose.material3.Button
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextField
+import androidx.compose.material3.TextFieldDefaults
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -55,8 +56,14 @@ fun ForgotPasswordScreen() {
                 modifier = Modifier.fillMaxWidth()
             )
             TextField("", onValueChange = {}, modifier = Modifier.fillMaxWidth(), placeholder = {
-                Text("Email Address")
-            })
+                Text("Email Address", color = Color.White)
+            }, colors = TextFieldDefaults.colors(
+                focusedContainerColor = Color.Black,
+                unfocusedContainerColor = Color.Black,
+                focusedTextColor = Color.White,
+                unfocusedTextColor = Color.White
+            )
+            )
         }
         Column(
             modifier = Modifier

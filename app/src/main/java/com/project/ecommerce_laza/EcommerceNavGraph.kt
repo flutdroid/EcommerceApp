@@ -7,13 +7,13 @@ import androidx.navigation.compose.rememberNavController
 import com.project.ecommerce_laza.presentation.CreateAccountScreen
 import com.project.ecommerce_laza.presentation.ForgotPasswordScreen
 import com.project.ecommerce_laza.presentation.GenderSelectionScreen
+import com.project.ecommerce_laza.presentation.HomeScreen
 import com.project.ecommerce_laza.presentation.LazaSplashScreen
 import com.project.ecommerce_laza.presentation.LoginScreen
 import com.project.ecommerce_laza.presentation.NewPasswordScreen
 import com.project.ecommerce_laza.presentation.OtpVerificationScreen
 import com.project.ecommerce_laza.presentation.ProductDetailScreen
 import com.project.ecommerce_laza.presentation.SignUpScreen
-import com.project.ecommerce_laza.presentation.components.GenderSelectionComp
 
 @Composable
 fun Navigation(){

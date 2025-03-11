@@ -10,6 +10,7 @@ import androidx.compose.foundation.layout.wrapContentSize
 import androidx.compose.material3.Button
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextField
+import androidx.compose.material3.TextFieldDefaults
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -50,21 +51,33 @@ fun NewPasswordScreen() {
                 "",
                 onValueChange = {},
                 placeholder = {
-                    Text("Password")
+                    Text("Password", color = Color.White)
                 },
                 modifier = Modifier
                     .fillMaxWidth()
                     .padding(bottom = 6.dp),
+                colors = TextFieldDefaults.colors(
+                    focusedContainerColor = Color.Black,
+                    unfocusedContainerColor = Color.Black,
+                    focusedTextColor = Color.White,
+                    unfocusedTextColor = Color.White
+                )
             )
             TextField(
                 "",
                 onValueChange = {},
                 placeholder = {
-                    Text("Confirm Password")
+                    Text("Confirm Password", color = Color.White)
                 },
                 modifier = Modifier
                     .fillMaxWidth()
-                    .padding(bottom = 6.dp)
+                    .padding(bottom = 6.dp),
+                colors = TextFieldDefaults.colors(
+                    focusedContainerColor = Color.Black,
+                    unfocusedContainerColor = Color.Black,
+                    focusedTextColor = Color.White,
+                    unfocusedTextColor = Color.White
+                )
             )
         }
         Column(
@@ -77,7 +90,8 @@ fun NewPasswordScreen() {
                 "Please write your new password.",
                 fontSize = 16.sp,
                 color = Color.White,
-                textAlign = TextAlign.Center
+                textAlign = TextAlign.Center,
+                modifier = Modifier.padding(12.dp)
             )
             Button(
                 onClick = {}, modifier = Modifier

@@ -1,4 +1,4 @@
-package com.project.ecommerce_laza
+package com.project.ecommerce_laza.presentation
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
@@ -20,11 +20,14 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.project.ecommerce_laza.R
 
 @Preview
 @Composable
 fun HomeScreen() {
-    Column(modifier = Modifier.fillMaxSize()) {
+    Column(modifier = Modifier
+        .fillMaxSize()
+        .padding(16.dp)) {
         Row(
             modifier = Modifier.fillMaxWidth(),
             horizontalArrangement = Arrangement.SpaceBetween,
@@ -33,19 +36,21 @@ fun HomeScreen() {
             Image(painter = painterResource(R.drawable.ic_menu), contentDescription = null)
             Image(painter = painterResource(R.drawable.ic_cart), contentDescription = null)
         }
-        Column(modifier = Modifier.fillMaxWidth()) {
+        Column(modifier = Modifier
+            .fillMaxWidth()
+            .padding(top = 16.dp)) {
             Text("Hello", fontSize = 24.sp, color = Color.White)
             Text("Welcome to Laza", fontSize = 16.sp, color = Color.White)
         }
         Row(
-            modifier = Modifier.fillMaxWidth(),
+            modifier = Modifier.fillMaxWidth().padding(top = 16.dp),
             horizontalArrangement = Arrangement.Center,
             verticalAlignment = Alignment.CenterVertically
         ) {
             TextField("", onValueChange = {}, modifier = Modifier.weight(1f))
             Image(painter = painterResource(R.drawable.ic_voice), contentDescription = null)
         }
-        Column(modifier = Modifier.fillMaxWidth()) {
+        Column(modifier = Modifier.fillMaxWidth().padding(top = 16.dp)) {
             Row(
                 modifier = Modifier.fillMaxWidth(),
                 verticalAlignment = Alignment.CenterVertically,

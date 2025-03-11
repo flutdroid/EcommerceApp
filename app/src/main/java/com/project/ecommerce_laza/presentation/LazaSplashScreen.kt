@@ -1,5 +1,6 @@
 package com.project.ecommerce_laza.presentation
 
+import android.content.Context
 import android.view.animation.OvershootInterpolator
 import androidx.compose.animation.core.Animatable
 import androidx.compose.animation.core.tween
@@ -14,6 +15,7 @@ import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.navigation.NavController
@@ -43,4 +45,11 @@ fun LazaSplashScreen(navController: NavController){
             R.drawable.ic_logo), contentDescription = null)
 
     }
+}
+
+
+@Preview
+@Composable
+fun LazaSplashScreenPreview(){
+    LazaSplashScreen(navController = NavController(context = LocalContext.current))
 }

@@ -43,9 +43,9 @@ fun CreateAccountScreen() {
             )
         }
         Column(modifier = Modifier.align(Alignment.Center)) {
-            CreateAccountComp("Facebook", icon = R.drawable.ic_back)
-            CreateAccountComp("Twitter", icon = R.drawable.ic_back)
-            CreateAccountComp("Google", icon = R.drawable.ic_back)
+            CreateAccountComp("Facebook", Color(0xFF4267B2))
+            CreateAccountComp("Twitter",Color(0xFF1DA1F2))
+            CreateAccountComp("Google", Color(0xFFEA4335))
         }
         Column(
             modifier = Modifier
@@ -54,7 +54,7 @@ fun CreateAccountScreen() {
             verticalArrangement = Arrangement.Center,
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
-            Text("Already have an account? Signin", fontSize = 16.sp, color = Color.White)
+            Text("Already have an account? SignIn", fontSize = 16.sp, color = Color.White, modifier = Modifier.padding(bottom = 12.dp))
             Button(onClick = {}, modifier = Modifier.fillMaxWidth()) {
                 Text("Create an Account", fontSize = 16.sp, modifier = Modifier.padding(6.dp))
             }

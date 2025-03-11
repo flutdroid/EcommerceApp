@@ -1,6 +1,7 @@
 package com.project.ecommerce_laza.presentation
 
 import androidx.compose.foundation.Image
+import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
@@ -10,6 +11,8 @@ import androidx.compose.foundation.layout.wrapContentSize
 import androidx.compose.material3.Button
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextField
+import androidx.compose.material3.TextFieldColors
+import androidx.compose.material3.TextFieldDefaults
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -23,9 +26,11 @@ import com.project.ecommerce_laza.R
 @Preview
 @Composable
 fun SignUpScreen() {
-    Box(modifier = Modifier
-        .fillMaxSize()
-        .padding(16.dp)) {
+    Box(
+        modifier = Modifier
+            .fillMaxSize()
+            .padding(16.dp)
+    ) {
         Column(modifier = Modifier.fillMaxWidth()) {
             Image(painter = painterResource(R.drawable.ic_back), contentDescription = null)
             Text(
@@ -37,39 +42,63 @@ fun SignUpScreen() {
                     .align(Alignment.CenterHorizontally)
             )
         }
-        Column(modifier = Modifier
-            .fillMaxWidth()
-            .align(Alignment.Center)) {
+        Column(
+            modifier = Modifier
+                .fillMaxWidth()
+                .align(Alignment.Center)
+        ) {
             TextField(
                 "",
                 onValueChange = {},
                 placeholder = {
-                    Text("Username")
+                    Text("Username", color = Color.White)
                 },
                 modifier = Modifier
                     .fillMaxWidth()
                     .padding(bottom = 6.dp),
+                colors = TextFieldDefaults.colors(
+                    focusedContainerColor = Color.Black,
+                    unfocusedContainerColor = Color.Black,
+                    focusedTextColor = Color.White,
+                    unfocusedTextColor = Color.White
+                )
             )
             TextField(
                 "",
                 onValueChange = {},
                 placeholder = {
-                    Text("Password")
+                    Text("Password", color = Color.White)
                 },
                 modifier = Modifier
                     .fillMaxWidth()
-                    .padding(bottom = 6.dp)
+                    .padding(bottom = 6.dp),
+                colors = TextFieldDefaults.colors(
+                    focusedContainerColor = Color.Black,
+                    unfocusedContainerColor = Color.Black,
+                    focusedTextColor = Color.White,
+                    unfocusedTextColor = Color.White
+                )
             )
-            TextField("", onValueChange = {},
+            TextField(
+                "", onValueChange = {},
                 placeholder = {
-                    Text("Email Address")
+                    Text("Email Address", color = Color.White)
                 },
-                modifier = Modifier.fillMaxWidth())
+                modifier = Modifier.fillMaxWidth(),
+                colors = TextFieldDefaults.colors(
+                    focusedContainerColor = Color.Black,
+                    unfocusedContainerColor = Color.Black,
+                    focusedTextColor = Color.White,
+                    unfocusedTextColor = Color.White
+                )
+            )
 
         }
-        Button(onClick = {}, modifier = Modifier
-            .fillMaxWidth()
-            .align(Alignment.BottomStart)) {
+        Button(
+            onClick = {}, modifier = Modifier
+                .fillMaxWidth()
+                .align(Alignment.BottomStart)
+        ) {
             Text("Sign Up", fontSize = 16.sp, modifier = Modifier.padding(6.dp))
         }
     }

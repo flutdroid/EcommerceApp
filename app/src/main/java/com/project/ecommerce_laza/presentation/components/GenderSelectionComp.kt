@@ -27,11 +27,12 @@ fun GenderSelectionComp() {
     Card(
         modifier = Modifier
             .fillMaxWidth()
-            .wrapContentHeight(),
+            .wrapContentHeight()
+            .padding(12.dp),
         shape = RoundedCornerShape(10.dp),
         colors = CardColors(
-            containerColor = Color.Cyan,
-            contentColor = Color.Black,
+            containerColor = Color(0xFF29363D),
+            contentColor = Color.White,
             disabledContentColor = Color.Blue,
             disabledContainerColor = Color.Blue
         )
@@ -47,18 +48,35 @@ fun GenderSelectionComp() {
         Text(
             "Create your individual & unique style and look amazing everyday.",
             fontSize = 16.sp,
-            modifier = Modifier.fillMaxWidth().padding(bottom = 12.dp),
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(bottom = 12.dp),
             textAlign = TextAlign.Center
         )
         Row(modifier = Modifier.fillMaxWidth()) {
-            Button(onClick = {}, modifier = Modifier.weight(1f).padding(horizontal = 12.dp), contentPadding = PaddingValues(24.dp)) {
+            Button(
+                onClick = {},
+                modifier = Modifier
+                    .weight(1f)
+                    .padding(horizontal = 12.dp),
+                contentPadding = PaddingValues(20.dp),
+                shape = RoundedCornerShape(10.dp)
+            ) {
                 Text(
                     "Men",
                     fontSize = 16.sp,
                     textAlign = TextAlign.Center
                 )
             }
-            Button(onClick = {}, modifier = Modifier.weight(1f).padding(horizontal = 12.dp), contentPadding = PaddingValues(24.dp)) {
+            Button(
+                onClick = {},
+                modifier = Modifier
+                    .weight(1f)
+                    .padding(horizontal = 12.dp),
+                contentPadding = PaddingValues(20.dp),
+                shape = RoundedCornerShape(10.dp)
+
+            ) {
                 Text(
                     "Women",
                     fontSize = 16.sp,
@@ -69,7 +87,9 @@ fun GenderSelectionComp() {
         Text(
             "Skip",
             fontSize = 16.sp,
-            modifier = Modifier.fillMaxWidth().padding(vertical = 12.dp),
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(vertical = 12.dp),
             textAlign = TextAlign.Center
         )
 
